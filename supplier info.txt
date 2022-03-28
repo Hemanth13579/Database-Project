@@ -1,0 +1,135 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2022 at 11:35 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `my_business2`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_info_2`
+--
+
+CREATE TABLE `customer_info_2` (
+  `Customer_Name` varchar(20) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL,
+  `date_of_first_sale` date DEFAULT NULL,
+  `number_of_total_sales` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_info_2`
+--
+
+INSERT INTO `customer_info_2` (`Customer_Name`, `id`, `date_of_first_sale`, `number_of_total_sales`) VALUES
+('Dom', 1122, '2022-01-01', 15),
+('Ryan', 2233, '2022-02-02', 18),
+('Joe root', 3344, '2022-03-03', 20);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_info_2`
+--
+
+CREATE TABLE `product_info_2` (
+  `Product_Name` varchar(50) DEFAULT NULL,
+  `product_cost` float DEFAULT NULL,
+  `Qty` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product_info_2`
+--
+
+INSERT INTO `product_info_2` (`Product_Name`, `product_cost`, `Qty`) VALUES
+('Tango LED floodlight', 845, 100),
+('GreenBay By400v', 754, 100),
+('Green perform sleek', 499, 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sales_info_2`
+--
+
+CREATE TABLE `sales_info_2` (
+  `Item_Name` varchar(40) DEFAULT NULL,
+  `Sale_Date` date DEFAULT NULL,
+  `Profit` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sales_info_2`
+--
+
+INSERT INTO `sales_info_2` (`Item_Name`, `Sale_Date`, `Profit`, `price`) VALUES
+('Tango LED floodlight', '2022-01-01', 5, 850),
+('GreenBay By400v', '2022-02-02', 6, 760),
+('Green perform sleek', '2022-03-03', 1, 500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `store_info_2`
+--
+
+CREATE TABLE `store_info_2` (
+  `Name_of_Emp` varchar(40) DEFAULT NULL,
+  `Emp_Role` varchar(40) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `store_info_2`
+--
+
+INSERT INTO `store_info_2` (`Name_of_Emp`, `Emp_Role`, `id`) VALUES
+('johnason', 'sr. executive', 789),
+('Dyanmo', 'jr.executive', 567),
+('Orton', 'security_head', 345);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `supplier_info_2`
+--
+
+CREATE TABLE `supplier_info_2` (
+  `Supplier_Name` varchar(30) DEFAULT NULL,
+  `Delivery_Time` time DEFAULT NULL,
+  `Next_Delivery_Date` date DEFAULT NULL,
+  `Quantity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `supplier_info_2`
+--
+
+INSERT INTO `supplier_info_2` (`Supplier_Name`, `Delivery_Time`, `Next_Delivery_Date`, `Quantity`) VALUES
+('troy_group', '19:10:10', '2022-01-01', 100),
+('Roy Group', '14:20:12', '2022-02-02', 200),
+('Shamanta Group', '15:20:12', '2022-03-03', 300);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
